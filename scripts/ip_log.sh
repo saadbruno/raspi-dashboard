@@ -7,9 +7,10 @@ dynv6_file=~/.dynv6.addr6
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 logfile=$DIR/output/ip_log.csv
 
-cur_ip=$(ip -6 addr list scope global | grep -v " fd" | sed -n 's/.*inet6 \([0-9a-f:]\+\).*/\1/p' | head -n 1)
+cur_ip6=$(ip -6 addr list scope global | grep -v " fd" | sed -n 's/.*inet6 \([0-9a-f:]\+\).*/\1/p' | head -n 1)
+cur_ip4=$(curl ifconfig.me)
 cur_date=$(date +"%x, %R" -r $dynv6_file)
-formatted="$cur_ip, $cur_date"
+formatted="$cur_ip6, $cur_ip4, $cur_date"
 
 echo -e "Current IPv6 and date of last update:\n$formatted\n"
 

@@ -26,7 +26,8 @@ function print_ip_log($ip_log){
 <table class="table table-sm">
   <thead>
     <tr>
-      <th scope="col">IP</th>
+      <th scope="col">IPv6</th>
+      <th scope="col">IPv4</th>
       <th scope="col">Data</th>
       <th scope="col">Hora</th>
     </tr>
@@ -39,6 +40,7 @@ function print_ip_log($ip_log){
       <td><?= $ip_row[0]?></td>
       <td><?= $ip_row[1]?></td>
       <td><?= $ip_row[2]?></td>
+      <td><?= $ip_row[3]?></td>
     </tr>
   <?php 
   }
