@@ -1,9 +1,9 @@
 <?php
-
+// disk usage with progress bars
+// https://getbootstrap.com/docs/4.4/components/progress/
 function print_disk_usage($disks_info)
 {
     foreach ($disks_info as $disk_name => $disk_info) {
-
 ?>
     <div class="mb-3">
         <h3 class="disk_name"><?= $disk_name ?></h3>
@@ -16,8 +16,36 @@ function print_disk_usage($disks_info)
     </div>
 
 <?php
-
     }
 }
 
+// table with IP logs
+function print_ip_log($ip_log){
+?>
+<div class="table-responsive ip-table">
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">IP</th>
+      <th scope="col">Data</th>
+      <th scope="col">Hora</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php
+  foreach ($ip_log as $ip_row) {
+  ?>
+    <tr>
+      <td><?= $ip_row[0]?></td>
+      <td><?= $ip_row[1]?></td>
+      <td><?= $ip_row[2]?></td>
+    </tr>
+  <?php 
+  }
+  ?> 
+  </tbody>
+</table>
+</div>
+<?php
+}
 ?>

@@ -48,3 +48,15 @@ function humanFileSize($size,$unit="") {
     return number_format($size/(1<<10),2)." KB";
   return number_format($size)." bytes";
 }
+
+// gets the ip log form the CSV in scripts/output
+function get_ip_log(){
+  $ip_log = array();
+  $file = fopen('scripts/output/ip_log.csv', 'r');
+  while (($line = fgetcsv($file)) !== FALSE) {
+    //$line is an array of the csv elements
+    $ip_log[] = $line;
+  }
+  fclose($file);
+  return $ip_log;
+}

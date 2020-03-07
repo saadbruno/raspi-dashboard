@@ -16,6 +16,9 @@ $load = sys_getloadavg();
 $temp = round(shell_exec("cat /sys/class/thermal/thermal_zone0/temp")/1000);
 $uptime = shell_exec('uptime -p');
 
+// ip log
+$ip_log = get_ip_log();
+
 // includes the view, which renders the page
 include "views/v_index.php";
 

@@ -12,6 +12,7 @@ include "partials/v_head.php";
         <?php 
             include "partials/v_disk_usage.php";
             include "partials/v_sysinfo.php";
+            include "partials/v_ip_log.php";
         ?>
     </div>
 </body>
