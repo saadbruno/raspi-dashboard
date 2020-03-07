@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Slab:400,700&display=swap');
+:root {
+    --font-family-title: 'Abril Fatface', cursive;
+    --font-family-sans-serif: 'Roboto Slab', serif;;
+    --text-color: #433258ff;
+    --text-over-accent: #fff;
+    --bg1: #F2B3B3;
+    --blue: #365B73;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    font-family: var(--font-family-title);
+}
+.h3, .h4, .h5, .h6, h3, h4, h5, h6 {
+    font-family: var(--font-family-sans-serif);
+}
+
+.h1, h1 {
+    color: var(--text-over-accent);
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    color: var(--text-color);
+    background-color: var(--bg1);
+}
+
+.small, small {
+    font-size: 90%;
+    opacity: 0.8;
+}
+
+.progress {
+    height: 1.5rem;
+    font-size: 1rem;
+}
+
+.progress-bar {
+    background-color: var(--blue);
+}
+
+.jumbotron {
+    padding-top: 3rem;
+    background-color: #fbfbfb;
+}
+
+ul.no-style {
+    list-style-type: none;
+    padding-left: 0;
+}
