@@ -58,5 +58,6 @@ function get_ip_log(){
     $ip_log[] = $line;
   }
   fclose($file);
+  $ip_log = array_reverse($ip_log);
   return $ip_log;
 }
