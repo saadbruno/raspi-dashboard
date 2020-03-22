@@ -19,6 +19,26 @@ $uptime = shell_exec('uptime -p');
 // ip log
 $ip_log = get_ip_log();
 
+// shortcuts
+$sc['rtorrent'] = array(
+    "title" => "rTorrent",
+    "icon" => "fas fa-download",
+    "url" => "../torrent"
+);
+
+$sc['pihole'] = array(
+    "title" => "Pi-Hole",
+    "img" => "media/img/pihole.svg",
+    "url" => "../admin"
+);
+
+$sc['plex'] = array(
+    "title" => "Plex",
+    "img" => "media/img/plex.svg",
+    //"url" => ":32400/web"
+    "url" => "../plex"
+);
+
 // includes the view, which renders the page
 include "views/v_index.php";
 

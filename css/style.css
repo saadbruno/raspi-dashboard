@@ -3,7 +3,7 @@
     --font-family-title: 'Abril Fatface', cursive;
     --font-family-sans-serif: 'Roboto Slab', serif;
     ;
-    --text-color: #433258ff;
+    --text-color: #433258;
     --text-over-accent: #fff;
     --bg1: #F2B3B3;
     --blue: #365B73;
@@ -67,4 +67,26 @@ ul.no-style {
 
 .ip-table {
     max-height: 50vh;
+}
+
+a.shortcut-container {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.shortcut-container:hover {
+    opacity: 0.85;
+}
+
+.shortcut-container .jumbotron {
+    padding-bottom: 0.8rem;
+    text-align: center;
+}
+
+.shortcut-img {
+    height: 28px;
+    margin-right: 2px;
+    vertical-align: baseline;
+    position: relative;
+    top: 3px;
 }
